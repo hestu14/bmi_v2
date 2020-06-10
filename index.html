@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="display-5" style="color:whitesmoke">Menghitung Body Mass Index</h1>
+        <!-- <p class="lead">Menghitung Body Mass Index</p> -->
+    </div>
+
+    <div class="container mt-4">
+        <form>
+            <div class="form-group mb-4">
+                <label for="inputNama">Nama</label>
+                <input type="text" class="form-control" id="inputNama" placeholder="ex : Joni...">
+            </div>
+            <div class="form-row mb-4">
+                <div class="form-group col-md-6">
+                    <label for="inputTinggi">Tinggi Badan</label>
+                    <input type="text" class="form-control" id="inputTinggi" placeholder="cm">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputBerat">Berat Badan</label>
+                    <input type="text" class="form-control" id="inputBerat" placeholder="kg">
+                </div>
+            </div>
+            <center>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Hitung
+                    BMI</button>
+            </center>
+
+        </form>
+    </div>
+
+    <div class="container mt-4">
+        <center>
+            <button type="button" class="btn btn-light" onclick="LightMode()">Light</button>
+            <button type="button" class="btn btn-dark" onclick="DarkMode()">Dark</button>
+        </center>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Hai nama</p>
+                    <p>Nilai BMI kamu = ...</p>
+                    <p>Berat badan kamu tergolong ...., <span>"anjuran kesehatan"</span></p>
+                    <p>Kamu harus nambah / kurangin berat badan ... biar ideal</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

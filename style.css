@@ -1,0 +1,27 @@
+body {
+    margin : 0;
+    padding: 0;
+    background-image: url("background-light.png");
+}
+
+.dark-mode {
+    background-image: url("background-dark.png")k;
+}
+
+.light-mode {
+    background-image: url("background-light.png")k;
+}
+
+.container {
+    width: 40%;
+    background-color: skyblue;
+    padding: 20px;
+}
+
+@media (max-width: 768px)
+{
+    .container {
+        margin-top: 100px;
+        width: 80%;
+    }
+}
