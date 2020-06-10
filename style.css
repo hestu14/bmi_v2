@@ -4,14 +4,6 @@ body {
     background-image: url("background-light.png");
 }
 
-.dark-mode {
-    background-image: url("background-dark.png")k;
-}
-
-.light-mode {
-    background-image: url("background-light.png")k;
-}
-
 .container {
     width: 40%;
     background-color: skyblue;

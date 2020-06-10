@@ -3,11 +3,13 @@ $('#myModal').on('shown.bs.modal', function () {
 });
 
 function DarkMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+    $(document).ready(function() {
+        $('body').css('background-image', 'url(background-dark.png)');
+    });
 };
 
 function LightMode() {
-    var element = document.body;
-    element.classList.toggle("light-mode");
+    $(document).ready(function() {
+        $('body').css('background-image', 'url(background-light.png)');
+    });
 };
