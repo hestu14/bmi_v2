@@ -21,7 +21,7 @@
         crossorigin="anonymous"></script>
 
 
-    <script src="script.js"></script>
+
 
 </head>
 
@@ -31,7 +31,7 @@
         <!-- <p class="lead">Menghitung Body Mass Index</p> -->
     </div>
 
-    <div class="container mt-4">
+    <div class="container mt-4 formInput">
         <form>
             <div class="form-group mb-4">
                 <label for="inputNama">Nama</label>
@@ -48,7 +48,8 @@
                 </div>
             </div>
             <center>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Hitung
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
+                    onclick="HitungBMI()">Hitung
                     BMI</button>
             </center>
 
@@ -69,16 +70,16 @@
         <div class="modal-dialog " role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Hasil Perhitungan BMI</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Hai nama</p>
-                    <p>Nilai BMI kamu = ...</p>
-                    <p>Berat badan kamu tergolong ...., <span>"anjuran kesehatan"</span></p>
-                    <p>Kamu harus nambah / kurangin berat badan ... biar ideal</p>
+                    <div id="NamaKamu"></div>
+                    <div id="nilaiBMI"></div>
+                    <div id="GradeBadan"></p>
+                    <!-- <p>Kamu harus nambah / kurangin berat badan ... biar ideal</p> -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -86,6 +87,9 @@
             </div>
         </div>
     </div>
+
+
+    <script src="script.js"></script>
 
 </body>
 
