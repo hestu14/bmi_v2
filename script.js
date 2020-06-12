@@ -24,28 +24,27 @@ function HitungBMI() {
     var nama = document.getElementById("inputNama").value;
     var berat = document.getElementById("inputBerat").value;
     var tinggi = document.getElementById("inputTinggi").value;
-    var nilaiBMI = document.getElementById("nilaiBMI");
-    var NamaKamu = document.getElementById("NamaKamu");
-    var GradeBadan = document.getElementById("GradeBadan");
+    var isiModal = document.getElementById("isiModal");
 
     var BMI;
+    var grade;
 
     BMI = berat / ((tinggi / 100) * (tinggi / 100));
     BMIfixed = BMI.toFixed(2);
-    console.log(BMIfixed);
 
-    nilaiBMI.innerHTML = "Nilai BMI kamu : " + BMIfixed;
 
-    NamaKamu.innerHTML = "Hai " + nama;
+    if (BMIfixed < 18.5) { grade = "Berat badan kamu kurang <br> Makan lagi yang banyak !!!"; }
+    else if (BMIfixed < 22.9) { grade = "Berat badan kamu normal <br> Bagus pertahankan !!!"; }
+    else if (BMIfixed < 29.9) { grade = "Berat badan kamu cenderung obesitas <br> Ayo mulai kurangi ngemil !!!"; }
+    else { grade = "Berat badan kamu obesitas <br> Ayo mulai program diet dari sekarang !!!"; }
 
-    var grade;
-
-    if (BMIfixed < 18.5) grade = "Berat badan kamu kurang <br> Makan lagi yang banyak !!!"
-    else if (BMIfixed < 22.9) grade = "Berat badan kamu normal <br> Bagus pertahankan !!!"
-    else if (BMIfixed < 29.9) grade = "Berat badan kamu cenderung obesitas <br> Ayo mulai kurangi ngemil !!!"
-    else grade = "Berat badan kamu obesitas <br> Ayo mulai program diet dari sekarang !!!";
-
-    GradeBadan.innerHTML = grade;
+    if (nama !== "" && berat !== "" && tinggi !== "") {
+        isiModal.innerHTML = "Hai " + nama + "<br> Nilai BMI kamu : " + BMIfixed + "<br>" + grade;
+    }
+    else {
+        
+        isiModal.innerHTML = "Data yang kamu isi belum lengkap !!!";
+    }
 
 
 
@@ -60,10 +59,4 @@ function HitungBMI() {
     // if (BMIfixed > 22.9) Turun2if = Turun2fixed
     // else Turun2if = 0;
 
-
-
-    // Namagrade = Hai + Nama2 + grade
-    // if (Nama1 !== "" && Berat !== "" && Tinggi !== "")
-    //   alert(`${Namagrade}`)
-    // else alert('Data yang kamu isi gak lengkap !');
 }
